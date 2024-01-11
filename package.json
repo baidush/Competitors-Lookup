@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "dotenv": "^16.3.1",
-    "mongoose": "^8.0.4"
+    "mongoose": "^8.0.4",
+    "openai": "^4.24.3"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.131",
@@ -27,6 +28,7 @@
     "@types/sinon": "^17.0.3",
     "chai": "^5.0.0",
     "cross-env": "^7.0.3",
+    "eslint-config-airbnb": "^19.0.4",
     "lambda-tester": "^4.0.1",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
@@ -35,7 +37,6 @@
     "sinon": "^17.0.1",
     "ts-node": "^10.9.2",
     "tslint": "^6.1.2",
-    "eslint-config-airbnb": "^19.0.4",
     "typescript": "^5.3.3"
   },
   "repository": {

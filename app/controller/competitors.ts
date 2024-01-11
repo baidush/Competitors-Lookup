@@ -16,11 +16,11 @@ export class CompetitorsController extends CompetitorsService {
   async create (event: any, context?: Context) {
     console.log('functionName', context.functionName);
     const params: CreateCompetitorDTO = JSON.parse(event.body);
-
     try {
       const result = await this.createCompetitor({
         name: params.name,
         id: params.id,
+        description: params.description
       });
 
       return MessageUtil.success(result);
