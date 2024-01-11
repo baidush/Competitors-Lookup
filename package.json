@@ -1,0 +1,58 @@
+{
+  "name": "r2d2-aws-api-test",
+  "version": "1.0.0",
+  "description": "This is simple REST API example for AWS Lambda By Serverless framwork with TypeScript and MongoDB Atlas.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "local": "serverless offline",
+    "deploy": "serverless deploy",
+    "test": "cross-env NODE_ENV=dev mocha -r ts-node/register tests/*.test.ts --exit",
+    "coverage": "nyc --reporter lcov npm run test"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131",
+    "@types/chai": "^4.3.11",
+    "@types/dotenv-safe": "^8.1.5",
+    "@types/lambda-tester": "^4.0.3",
+    "@types/mocha": "^10.0.6",
+    "@types/mongoose": "^5.11.96",
+    "@types/sinon": "^17.0.3",
+    "chai": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "lambda-tester": "^4.0.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "serverless-offline": "^13.3.2",
+    "serverless-plugin-typescript": "^2.1.5",
+    "sinon": "^17.0.1",
+    "ts-node": "^10.9.2",
+    "tslint": "^6.1.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baidush/r2d2-test.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "TypeScript",
+    "ServerLess",
+    "MongoDB Atlas",
+    "AWS Lambda"
+  ],
+  "author": "Kostix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baidush/r2d2-test.git/issues"
+  },
+  "homepage": "https://github.com/baidush/r2d2-test.git#readme"
+}
