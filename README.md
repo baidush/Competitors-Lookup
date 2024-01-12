@@ -6,7 +6,9 @@
 
 [Frontend](https://github.com/baidush/r2d2-test/blob/main/frontend/README.md)
 
-[![Watch the DEMO](https://ibb.co/fn8gXYV)](https://youtu.be/sDymeEwrh4E?si=8mGtev9Brg4rqSOZ)
+[![Watch the DEMO](https://ibb.co/fn8gXYV)]()
+
+[![](https://ibb.co/fn8gXYV)](https://youtu.be/sDymeEwrh4E?si=8mGtev9Brg4rqSOZ)
 ## Created By
 
 * [Kostiantyn Baidush](http://kostix.tech/)
