@@ -5,10 +5,6 @@ on:
     branches:
       - main
 
-defaults:
-  run:
-    working-directory: ./backend
-
 jobs:
   deploy:
     name: deploy
@@ -25,9 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: serverless deploy
-      uses: serverless/github-action@master
       run: |
           cd backend
+      uses: serverless/github-action@master
       with:
         args: deploy
       env:
