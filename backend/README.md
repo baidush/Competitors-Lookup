@@ -43,3 +43,10 @@ $ npm run deploy
 
 $ serverless deploy
 ```
+
+### Unit Tests:
+
+```
+$ npm run test
+
+```
