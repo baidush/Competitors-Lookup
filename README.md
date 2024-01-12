@@ -2,14 +2,15 @@
 
 
 ## User guide
-```
-The app sends a request to ChatGPT with the company name and then stores the list of competitors in MongoDB. The 'Parameter Description' is utilized for providing additional information. 
 
-Example:
+* The app sends a request to ChatGPT with the company name and then stores the list of competitors in MongoDB. 
+* The 'Parameter Description' is utilized for providing additional information. 
 
-Name: Apple
-Description (optional): Macbook
-```
+* Example:
+
+* Name: Apple
+* Description (optional): Macbook
+
 
 ## Take a look at README for backend and frontend to run it localy
 
