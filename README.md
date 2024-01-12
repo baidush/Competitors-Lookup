@@ -11,6 +11,8 @@ Example:
 * Name: Apple
 * Description (optional): Macbook
 
+## Demo page
+[Demo](https://baidush.github.io/r2d2-test)
 
 ## Take a look at README for backend and frontend to run it localy
 
