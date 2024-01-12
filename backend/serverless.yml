@@ -24,15 +24,6 @@ functions:
       - http:
           path: competitors
           method: post
-           cors:
-            origin: 'https://81dh31fa18.execute-api.us-east-1.amazonaws.com'
-            headers:
-              - MY_CUSTOM_HEADER
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
   update:
     handler: app/handler.update
     events:
