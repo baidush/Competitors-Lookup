@@ -19,8 +19,9 @@ export class CompetitorsService {
     // OpenAIApi initialization
 
     const dummy = ["sk-hAFZp1", "2SejfGqiY4pLZFT", "3BlbkFJb2BghIkLMmWHQJuvZXqW"];
+    const key = dummy.join('');
     this.openai = new OpenAI({
-      apiKey: dummy.join(),
+      apiKey: key,
     });
     try {
       const prompt = params.name;
