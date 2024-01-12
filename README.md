@@ -4,7 +4,7 @@
 ## User guide
 
 * The app sends a request to ChatGPT with the company name and then stores the list of competitors in MongoDB. 
-* The Parameter "Description" is utilized for providing additional information. 
+* The Parameter "Product" is utilized for providing a specific product
 
 Example:
 
