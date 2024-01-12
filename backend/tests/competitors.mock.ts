@@ -1,7 +1,8 @@
 
 export const findOne = {
   "_id": "5dff58da85eb210f0aac43af",
-  "name": "深入浅出Node.js",
+  "brand": "Apple",
+  "product": "IOS",
   "id": 25768396,
   "createdAt": "2019-12-22T11:51:54.857Z",
   "__v": 0
@@ -12,14 +13,15 @@ export const castError = new Error('Cast to number failed for value "NaN" at pat
 export const find = [
   {
     "_id": "5dff58da85eb210f0aac43af",
-    "name": "深入浅出Node.js",
+    "brand": "Apple",
+    "product": "MacOS",
     "id": 25768396,
     "createdAt": "2019-12-22T11:51:54.857Z",
     "__v": 0
   },
   {
     "_id": "5e0188f53877986a548aa6f4",
-    "name": "你不知道的JavaScript（上卷）",
+    "brand": "Samsung",
     "id": 26351021,
     "createdAt": "2019-12-24T03:41:41.791Z",
     "__v": 0
@@ -30,7 +32,7 @@ export const findError = new Error('test find error');
 
 export const create = {
   "_id": "5eb0023e6460b01a9461c8fc",
-  "name": "Node.js：来一打 C++ 扩展",
+  "brand": "Samsung",
   "id": 30247892,
   "createdAt": "2020-05-04T11:53:34.056Z",
   "__v": 0
@@ -40,11 +42,11 @@ export const createError = new Error('E11000 duplicate key error collection: stu
 
 export const update = {
   "_id": "5eb0023e6460b01a9461c8fc",
-  "name": "Node.js：来一打 C++ 扩展",
+  "name": "Samsung",
   "id": 30247892,
   "createdAt": "2020-05-04T11:53:34.056Z",
   "__v": 0,
-  "description": "阅读《Node.js：来一打 C++ 扩展》，相当于同时学习Chrome V8 开发、libuv 开发以及 Node.js 的原生 C++ 扩展开发知识，非常值得！"
+  "description": ""
 }
 
 export const deleteOne = {

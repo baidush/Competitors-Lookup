@@ -1,20 +1,20 @@
 import lambdaTester from 'lambda-tester';
 import { expect } from 'chai';
 import { findOne, find, create, update, deleteOne } from '../app/handler';
-import * as booksMock from './books.mock';
-import { books as BooksModel } from '../app/model/competitors';
+import * as competitorsMock from './competitors.mock';
+import { competitors as CompetitorsModel } from '../app/model/competitors';
 import sinon from 'sinon';
 
 describe('FindOne [GET]', () => {
   it('success', () => {
     try {
       const s = sinon
-        .mock(BooksModel);
+        .mock(CompetitorsModel);
 
       s.expects('findOne')
         .atLeast(1)
         .atMost(3)
-        .resolves(booksMock.findOne);
+        .resolves(competitorsMock.findOne);
 
       return lambdaTester(findOne)
       .event({ pathParameters: { id: 25768396 } })
@@ -33,10 +33,10 @@ describe('FindOne [GET]', () => {
   it('error', () => {
     try {
       const s = sinon
-        .mock(BooksModel);
+        .mock(CompetitorsModel);
 
       s.expects('findOne')
-        .rejects(booksMock.castError);
+        .rejects(competitorsMock.castError);
 
       return lambdaTester(findOne)
       .event({ pathParameters: { id: 25768396 } })
@@ -55,10 +55,10 @@ describe('FindOne [GET]', () => {
 describe('Find [GET]', () => {
   it('success', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
     s.expects('find')
-      .resolves(booksMock.find);
+      .resolves(competitorsMock.find);
 
     return lambdaTester(find)
     .event({})
@@ -72,9 +72,9 @@ describe('Find [GET]', () => {
 
   it('error', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('find').rejects(booksMock.findError);
+    s.expects('find').rejects(competitorsMock.findError);
 
     return lambdaTester(find)
     .event({})
@@ -90,13 +90,13 @@ describe('Find [GET]', () => {
 describe('Create [POST]', () => {
   it('success', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('create').resolves(booksMock.create);
+    s.expects('create').resolves(competitorsMock.create);
 
     return lambdaTester(create)
       .event({ body: JSON.stringify({
-        name: 'Node.js：来一打 C++ 扩展',
+        name: 'Apple',
         id: 30247892,
       })})
       .expectResult((result: any) => {
@@ -109,13 +109,13 @@ describe('Create [POST]', () => {
 
   it('error', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('create').rejects(booksMock.createError);
+    s.expects('create').rejects(competitorsMock.createError);
 
     return lambdaTester(create)
       .event({ body: JSON.stringify({
-        name: 'Node.js：来一打 C++ 扩展',
+        name: 'Apple',
         id: 30247892,
       })})
       .expectResult((result: any) => {
@@ -130,14 +130,14 @@ describe('Create [POST]', () => {
 describe('Update [PUT]', () => {
   it('success', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('findOneAndUpdate').resolves(booksMock.update);
+    s.expects('findOneAndUpdate').resolves(competitorsMock.update);
 
     return lambdaTester(update)
       .event({ pathParameters: { id: 30247892 }, body: JSON.stringify({
-        name: 'Node.js：来一打 C++ 扩展',
-        description: '阅读《Node.js：来一打 C++ 扩展》，相当于同时学习Chrome V8 开发、libuv 开发以及 Node.js 的原生 C++ 扩展开发知识，非常值得！',
+        name: 'Samsung',
+        description: '',
       })})
       .expectResult((result: any) => {
         expect(result.statusCode).to.equal(200);
@@ -149,14 +149,14 @@ describe('Update [PUT]', () => {
 
   it('error', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('findOneAndUpdate').rejects(booksMock.castError);
+    s.expects('findOneAndUpdate').rejects(competitorsMock.castError);
 
     return lambdaTester(update)
       .event({  pathParameters: { id: '30247892_' }, body: JSON.stringify({
-        name: 'Node.js：来一打 C++ 扩展',
-        description: '阅读《Node.js：来一打 C++ 扩展》，相当于同时学习Chrome V8 开发、libuv 开发以及 Node.js 的原生 C++ 扩展开发知识，非常值得！',
+        name: 'Samsung',
+        description: '',
       })})
       .expectResult((result: any) => {
         expect(result.statusCode).to.equal(200);
@@ -170,9 +170,9 @@ describe('Update [PUT]', () => {
 describe('DeleteOne [Delete]', () => {
   it('success', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('deleteOne').resolves(booksMock.deleteOne);
+    s.expects('deleteOne').resolves(competitorsMock.deleteOne);
 
     return lambdaTester(deleteOne)
       .event({  pathParameters: { id: 30247892 } })
@@ -186,9 +186,9 @@ describe('DeleteOne [Delete]', () => {
 
   it('deletedCount === 0', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('deleteOne').resolves(booksMock.deletedCount);
+    s.expects('deleteOne').resolves(competitorsMock.deletedCount);
 
     return lambdaTester(deleteOne)
       .event({ pathParameters: { id: 30247892 } })
@@ -202,9 +202,9 @@ describe('DeleteOne [Delete]', () => {
 
   it('error', () => {
     const s = sinon
-      .mock(BooksModel);
+      .mock(CompetitorsModel);
 
-    s.expects('deleteOne').rejects(booksMock.castError);
+    s.expects('deleteOne').rejects(competitorsMock.castError);
 
     return lambdaTester(deleteOne)
       .event({ pathParameters: { id: '30247892_' } })

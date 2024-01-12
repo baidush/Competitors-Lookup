@@ -9,7 +9,7 @@
     "noUnusedParameters": true,
     "outDir": "lib",
     "sourceMap": true,
-    "target": "esnext"
+    "target": "esnext",
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
