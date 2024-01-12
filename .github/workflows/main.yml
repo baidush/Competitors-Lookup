@@ -21,9 +21,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: serverless deploy
-      run: |
-          cd backend
       uses: serverless/github-action@master
+      working-directory: backend
       with:
         args: deploy
       env:
