@@ -2,7 +2,7 @@
 export default {
   "name": "RESTool App",
   "favicon": "https://www.commoninja.com/public/favicon.ico",
-  "baseUrl": "https://restool-sample-app.herokuapp.com/api",
+  "baseUrl": "https://81dh31fa18.execute-api.us-east-1.amazonaws.com/dev",
   "pages": [
     {
       "name": "Cast & Characters",
