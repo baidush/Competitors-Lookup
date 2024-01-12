@@ -26,7 +26,8 @@ jobs:
 
     - name: serverless deploy
       uses: serverless/github-action@master
-      run: cd ./backend
+      run: |
+          cd backend
       with:
         args: deploy
       env:
