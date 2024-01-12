@@ -1,11 +1,11 @@
 # Welcome to R2D2 TEST CRUD 1.0
 
 
-## Userguide
+## User guide
 ```
 The app sends a request to ChatGPT with the company name and then stores the list of competitors in MongoDB. The 'Parameter Description' is utilized for providing additional information. 
 
-For example:
+Example:
 
 Name: Apple
 Description (optional): Macbook
