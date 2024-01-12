@@ -1,0 +1,102 @@
+{
+  "name": "R2D2 Crud",
+  "favicon": "https://www.commoninja.com/public/favicon.ico",
+  "baseUrl": "http://localhost:3000/dev",
+  "pages": [
+    {
+      "name": "Competitors",
+      "id": "competitors",
+      "description": "Competitors list",
+      "methods": {
+        "getAll": {
+          "label": "Get All",
+          "dataPath": "data",
+          "url": "/competitors",
+          "queryParams": [
+            {
+              "name": "search",
+              "value": "",
+              "label": "Search",
+              "type": "text"
+            }
+          ],
+          "display": {
+            "type": "table"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Name"
+            },
+            {
+              "name": "id",
+              "type": "text",
+              "label": "ID"
+            },
+            {
+              "name": "description",
+              "type": "text",
+              "label": "Description"
+            },
+            {
+              "name": "createdAt",
+              "type": "text",
+              "label": "Created At"
+            }
+          ]
+        },
+        "getSingle": {
+          "url": "/competitors/:id",
+          "queryParams": [],
+          "requestHeaders": {},
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Name"
+            },
+            {
+              "name": "description",
+              "type": "text",
+              "label": "Description"
+            }
+          ]
+        },
+        "put": {
+          "url": "/competitors/:id",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Name"
+            },
+            {
+              "name": "description",
+              "type": "text",
+              "label": "Description"
+            }
+          ]
+        },
+        "post": {
+          "url": "/competitors",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Name"
+            },
+            {
+              "name": "description",
+              "type": "text",
+              "label": "Description"
+            }
+          ]
+        },
+        "delete": {
+          "url": "/competitors/:id"
+        }
+      }
+    }
+  ]
+}
