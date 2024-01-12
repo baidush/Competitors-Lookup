@@ -14,6 +14,12 @@ This is simple REST API example for AWS Lambda By Serverless framwork with TypeS
 ```bash
 npm i -g serverless
 ```
+## Create openAI API key
+
+```
+Put the key in ./config/.env.dev file
+OPENAI_API_KEY=your api key
+```
 
 ## Invoke the function locally
 
