@@ -8,8 +8,8 @@
 
 Example:
 
-* Name: Apple
-* Description (optional): Macbook
+* Brand: Apple
+* Product (optional): Macbook
 
 ## Demo page
 [Demo](https://baidush.github.io/r2d2-test)
