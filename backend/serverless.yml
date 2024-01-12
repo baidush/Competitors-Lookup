@@ -24,24 +24,28 @@ functions:
       - http:
           path: competitors
           method: post
+          cors: true
   update:
     handler: app/handler.update
     events:
       - http:
           path: competitors/{id}
           method: put
+          cors: true
   find:
     handler: app/handler.find
     events:
       - http:
           path: competitors
           method: get
+          cors: true
   findOne:
     handler: app/handler.findOne
     events:
       - http:
           path: competitors/{id}
           method: get
+          cors: true
 
   deleteOne:
     handler: app/handler.deleteOne
@@ -49,3 +53,4 @@ functions:
       - http:
           path: competitors/{id}
           method: delete
+          cors: true
