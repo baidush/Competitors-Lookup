@@ -25,14 +25,19 @@
           },
           "fields": [
             {
-              "name": "name",
+              "name": "brand",
               "type": "text",
-              "label": "Name"
+              "label": "Brand"
             },
             {
               "name": "id",
               "type": "text",
               "label": "ID"
+            },
+            {
+              "name": "product",
+              "type": "text",
+              "label": "Product"
             },
             {
               "name": "description",
@@ -52,9 +57,14 @@
           "requestHeaders": {},
           "fields": [
             {
-              "name": "name",
+              "name": "brand",
               "type": "text",
-              "label": "Name"
+              "label": "Brand"
+            },
+            {
+              "name": "product",
+              "type": "text",
+              "label": "Product"
             },
             {
               "name": "description",
@@ -67,9 +77,14 @@
           "url": "/competitors/:id",
           "fields": [
             {
-              "name": "name",
+              "name": "brand",
               "type": "text",
-              "label": "Name"
+              "label": "Brand"
+            },
+            {
+              "name": "product",
+              "type": "text",
+              "label": "Product"
             },
             {
               "name": "description",
@@ -82,14 +97,14 @@
           "url": "/competitors",
           "fields": [
             {
-              "name": "name",
+              "name": "brand",
               "type": "text",
-              "label": "Name"
+              "label": "Brand"
             },
             {
-              "name": "description",
+              "name": "product",
               "type": "text",
-              "label": "Description"
+              "label": "Product"
             }
           ]
         },
