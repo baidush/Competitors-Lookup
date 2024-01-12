@@ -10,6 +10,11 @@ This is simple REST API example for AWS Lambda By Serverless framwork with TypeS
 * Mocha unit tests and lambda-tester interface test
 * AWS lambda function log view
 
+## Install Serverless
+```bash
+npm i -g serverless
+```
+
 ## Invoke the function locally
 
 ```bash
