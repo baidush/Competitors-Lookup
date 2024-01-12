@@ -1,5 +1,16 @@
 # Welcome to R2D2 TEST CRUD 1.0
 
+
+## Userguide
+```
+The app sends a request to ChatGPT with the company name and then stores the list of competitors in MongoDB. The 'Parameter Description' is utilized for providing additional information. 
+
+For example:
+
+Name: Apple
+Description (optional): Macbook
+```
+
 ## Take a look at README for backend and frontend to run it localy
 
 [Backend](https://github.com/baidush/r2d2-test/blob/main/backend/README.md)
