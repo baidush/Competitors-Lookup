@@ -22,9 +22,10 @@ export class CompetitorsService {
     });
     try {
       const prompt = params.name;
+      const description = params.description;
 
       const modelId = "gpt-3.5-turbo";
-      const promptText = `Find names list of competitors for ${prompt}`;
+      const promptText = `Find names list of competitors for ${prompt} ${description}`;
 
       const conversationContext = [];
       const currentMessages = [];
@@ -46,10 +47,20 @@ export class CompetitorsService {
       const responseText = chatCompletion.choices[0].message.content;
       conversationContext.push([promptText, responseText]);
 
+      const last = await this.competitors.find().sort( [['_id', -1]]).limit(1);
+      console.log(last, 'LLL')
+      let id = 1;
+      if(last.length > 0) {
+        id = last[0].id + 1;
+      } else {
+        id = 1;
+      }
+
+      console.log(id, 'DDD')
       try {
         const result = await this.competitors.create({
           name: params.name,
-          id: params.id,
+          id: id,
           description: responseText
         });
   
