@@ -24,11 +24,11 @@ export class CompetitorsService {
       apiKey: key,
     });
     try {
-      const prompt = params.name;
-      const description = params.description;
+      const prompt = params.brand;
+      const product = params.product;
 
       const modelId = "gpt-3.5-turbo";
-      const promptText = `Find names list of competitors for ${prompt} ${description}`;
+      const promptText = `Find names list of competitors for ${prompt} ${product}`;
 
       const conversationContext = [];
       const currentMessages = [];
@@ -53,15 +53,15 @@ export class CompetitorsService {
       const last = await this.competitors.find().sort( [['_id', -1]]).limit(1);
       let id = 1;
       if(last.length > 0) {
-        id = last[0].id + 1;
+        id = ++last[0].id;
       } else {
         id = 1;
       }
 
-      console.log(id, 'DDD')
       try {
         const result = await this.competitors.create({
-          name: params.name,
+          brand: params.brand,
+          product: params.product,
           id: id,
           description: responseText
         });

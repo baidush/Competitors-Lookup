@@ -1,5 +1,6 @@
 export class CreateCompetitorDTO {
-  name: string;
-  id: number;
+  brand: string;
+  id?: number;
+  product?: string;
   description?: string;
 }

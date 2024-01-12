@@ -18,9 +18,8 @@ export class CompetitorsController extends CompetitorsService {
     const params: CreateCompetitorDTO = JSON.parse(event.body);
     try {
       const result = await this.createCompetitor({
-        name: params.name,
-        id: params.id,
-        description: params.description
+        brand: params.brand,
+        product: params.product
       });
 
       return MessageUtil.success(result);
