@@ -1,7 +1,7 @@
 {
   "name": "R2D2 Crud",
   "favicon": "https://www.commoninja.com/public/favicon.ico",
-  "baseUrl": "http://81dh31fa18.execute-api.us-east-1.amazonaws.com/dev",
+  "baseUrl": "https://81dh31fa18.execute-api.us-east-1.amazonaws.com/dev",
   "pages": [
     {
       "name": "Competitors",
