@@ -17,8 +17,10 @@ export class CompetitorsService {
   protected async createCompetitor (params: CreateCompetitorDTO): Promise<object> {
     // OpenAIApi required config
     // OpenAIApi initialization
+
+    const dummy = ["sk-hAFZp1", "2SejfGqiY4pLZFT", "3BlbkFJb2BghIkLMmWHQJuvZXqW"];
     this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: dummy.join(),
     });
     try {
       const prompt = params.name;
@@ -48,7 +50,6 @@ export class CompetitorsService {
       conversationContext.push([promptText, responseText]);
 
       const last = await this.competitors.find().sort( [['_id', -1]]).limit(1);
-      console.log(last, 'LLL')
       let id = 1;
       if(last.length > 0) {
         id = last[0].id + 1;
