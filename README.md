@@ -22,7 +22,7 @@ Example:
 
 
 ## CLICK TO WATCH DEMO 
-[![Watch the DEMO](https://i.ibb.co/txZGHMw/Screenshot-2024-01-11-at-18-31-34.png)](https://youtu.be/sDymeEwrh4E?si=8mGtev9Brg4rqSOZ)
+[![Watch the DEMO](https://i.ibb.co/txZGHMw/Screenshot-2024-01-11-at-18-31-34.png)](https://youtu.be/0J0ZH9jfsS8?si=SV8qSqsCTrex3uKq)
 
 
 ## Created By
