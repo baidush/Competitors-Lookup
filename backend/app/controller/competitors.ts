@@ -93,7 +93,8 @@ export class CompetitorsController extends CompetitorsService {
     const id: number = event.pathParameters.id;
 
     try {
-      const result = await this.deleteOneCompetitorById(id);
+      const item = await this.findOneCompetitorById (id);
+      const result = await this.deleteOneCompetitorById(item);
 
       if (result.deletedCount === 0) {
         return MessageUtil.error(1010, 'The data was not found! May have been deleted!');

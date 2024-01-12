@@ -98,7 +98,7 @@ export class CompetitorsService {
    * Delete competitor by id
    * @param id
    */
-  protected deleteOneCompetitorById (id: number) {
-    return this.competitors.deleteOne({ id });
+  protected deleteOneCompetitorById (item: any) {
+    return this.competitors.deleteOne(item);
   }
 }
