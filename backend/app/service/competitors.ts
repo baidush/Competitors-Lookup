@@ -18,7 +18,7 @@ export class CompetitorsService {
     // OpenAIApi required config
     // OpenAIApi initialization
 
-    const dummy = ["sk-hAFZp1", "2SejfGqiY4pLZFT", "3BlbkFJb2BghIkLMmWHQJuvZXqW"];
+    const dummy = ["sk-", "2SejfGqiY4pLZFT", "3BlbkFJb2BghIkLMmWHQJuvZXqW"];
     const key = dummy.join('');
     this.openai = new OpenAI({
       apiKey: key,
