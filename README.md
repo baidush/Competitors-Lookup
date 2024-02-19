@@ -1,4 +1,4 @@
-# Welcome to R2D2 TEST CRUD 1.0
+# Welcome to Competitors Loockup CRUD beta
 
 
 ## User guide
