@@ -12,7 +12,7 @@ Example:
 * Product (optional): Macbook
 
 ## Demo page
-[Demo](https://baidush.github.io/r2d2-test)
+[Demo](https://baidush.github.io/Competitors-Lookup)
 
 ## Take a look at README for backend and frontend to run it localy
 
